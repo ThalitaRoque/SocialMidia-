@@ -6,11 +6,11 @@ const RedesocialSchema = new Schema(
     name: { type: String, required: true, trim: true },
     yearsonfundation: { type: String, trim: true },
     on_air: { type: Boolean, trim: true },
-    creator: [{ type: Schema.Types.ObjectId, ref: "fundadores", required: true }],
+    creator: [{ type: Schema.Types.ObjectId, ref: "fundadores", required: false }],
     img: { type: String, trim: true },
   },
-  { timestamp: true, collection: "socialmidia" }
+  { timestamp: true, collection: "redesociales" }
 );
 
-const Serie = mongoose.model("redesociales", RedesocialSchema);
+const Redesocial = mongoose.model("redesociales", RedesocialSchema);
 module.exports = Redesocial;

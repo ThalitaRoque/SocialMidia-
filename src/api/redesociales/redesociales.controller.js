@@ -22,7 +22,7 @@ const postNewRedesocial = async (req, res, next) => {
 const getAllRedesociales = async (req, res, next) => {
   try {
     const redesocialesDB = await Redesocial.find().populate('creator')
-    res.status(200).json(redesocialDB);
+    res.status(200).json(redesocialesDB);
   } catch (error) {
     return next(setError(500, "Rede Social failed server"));
   }
